@@ -1,14 +1,21 @@
-class Inquiry < ActiveRecord::Base
-  def self.columns() @columns ||= []; end
-   
-  def self.column(name, sql_type = nil, default = nil, null = true)
-    columns << ActiveRecord::ConnectionAdapters::Column.new(name.to_s, default, sql_type.to_s, null)
-  end
-             
-  column :name, :string
-  column :email, :string
-  column :tel, :string
-  column :text, :text
+#http://stackoverflow.com/questions/7275496/tableless-model-in-rails-3-1
+class Inquiry
+  include ActiveModel::Validations
+  include ActiveModel::Conversion
+  extend ActiveModel::Naming
 
+  attr_accessor :name, :email, :tel, :text
   validates :name, :email, :text, presence: true
+
+  def initialize(attributes = {})
+    if attributes
+      attributes.each do |name, value|
+        send("#{name}=", value)
+      end
+    end
+  end
+
+  def persisted?
+    false
+  end
 end

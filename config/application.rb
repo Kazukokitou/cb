@@ -53,7 +53,7 @@ module Cb
     }
     # http://www.rabbitcreative.com/2010/09/20/rails-3-still-fucking-up-field_with_errors/
     ActionView::Base.field_error_proc = Proc.new do |html_tag, instance|
-        include ActionView::Helpers::RawOutputHelper
+        include ActionView::Helpers::OutputSafetyHelper
         raw %(<span class="field_with_errors">#{html_tag}</span>)
     end
   end

@@ -1,8 +1,11 @@
 <h2>Information</h2>
 <dl>
+    <dt>最新ブログ</dt>
+    <%= content_tag :dd do -%>
+      <% load_blog %>
+      <%= link_to @blog_title + @blog_date, @blog_url %>
+    <% end -%>
     <dt>営業時間のお知らせ</dt>
     <dd>毎週金・土 11:00&#xFF5E;売り切れまで<br />
     皆様のご来店をお待ちしております。</dd>
-    <dt>Coupé Baguetteオープン！</dt>
-    <dd>2011年12月16日よりオープンしました。</dd>
 </dl>
