@@ -8,4 +8,8 @@ module PagesHelper
     @blog_date = feed.date_published.strftime(" (%Y/%m/%d)")
     @blog_url = feed.urls[0]
   end
+
+  def display?(datestr)
+    Date.today <= Date.parse(datestr)
+  end
 end
