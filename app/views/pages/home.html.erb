@@ -5,10 +5,15 @@
       <% load_blog %>
       <%= link_to @blog_title + @blog_date, @blog_url %>
     <% end -%>
+    <dt>臨時休業日のお知らせ</dt>
+    <dd>
     <% if display?('2012/9/22') %>
-      <dt>臨時休業日のお知らせ</dt>
-      <dd>9月22日(土)</dd>
+      9月22日(土), 
     <% end %>
+    <% if display?('2012/10/6') %>
+      10月6日(土)
+    <% end %>
+    </dd>
     <dt>営業時間</dt>
     <dd>毎週金土 10:00&#xFF5E;売り切れまで<br />
     お取り置きもできます。(0795-27-7032)</dd>
