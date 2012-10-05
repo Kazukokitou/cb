@@ -1,12 +1,14 @@
 <h2>Information</h2>
 <dl>
-    <dt>おわび</dt>
-    <dd>10月4日以降、電話がつながらない状態が続いています。ご迷惑をおかけしますが、復旧までしばらくお待ちください。</dd>
+    <% if display?('2012/10/12') %>
+      <dt>おわび</dt>
+      <dd>10月4日&#xff5e;5日の間、電話がつながらない状態が続いていました。ご迷惑をおかけして申し訳ありませんでした。</dd>
+    <% end %>
     <dt>最新ブログ</dt>
-    <%= content_tag :dd do -%>
+    <%= content_tag :dd do %>
       <% load_blog %>
       <%= link_to @blog_title + @blog_date, @blog_url %>
-    <% end -%>
+    <% end %>
     <% if display?('2012/10/6') %>
       <dt>臨時休業日のお知らせ</dt>
       <dd>10月6日(土)</dd>
