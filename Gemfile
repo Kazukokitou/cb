@@ -8,6 +8,7 @@ gem 'rails', '3.1.3'
 gem 'sqlite3', '~> 1.3.0'
 
 gem 'feed-normalizer'
+gem 'newrelic_rpm'
 
 # Use unicorn as the web server
 # gem 'unicorn'
