@@ -1,19 +1,16 @@
 <h2>Information</h2>
 <dl>
-    <% if display?('2012/10/12') %>
-      <dt>おわび</dt>
-      <dd>10月4日&#xff5e;5日の間、電話がつながらない状態が続いていました。ご迷惑をおかけして申し訳ありませんでした。</dd>
-    <% end %>
     <dt>最新ブログ</dt>
     <%= content_tag :dd do %>
       <% load_blog %>
       <%= link_to @blog_title + @blog_date, @blog_url %>
     <% end %>
-    <% if display?('2012/10/6') %>
-      <dt>臨時休業日のお知らせ</dt>
-      <dd>10月6日(土)</dd>
-    <% end %>
+    お取り置きもできます。(0795-27-7032)</dd>
+    <dt>Facebookページができました！</dt>
+    <dd>
+    「いいね」ボタンを押していただくと、営業日のメニューやパンの売れ行き等をお知らせします！
+    &#x261e; <a href="http://www.facebook.com/coupebaguette" target="_blank"><%= image_tag 'fb.png' %></a>
+    </dd>
     <dt>営業時間</dt>
     <dd>毎週金土 10:00&#xFF5E;売り切れまで<br />
-    お取り置きもできます。(0795-27-7032)</dd>
 </dl>
