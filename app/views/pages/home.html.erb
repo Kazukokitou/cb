@@ -5,9 +5,13 @@
       <% load_blog %>
       <%= link_to @blog_title + @blog_date, @blog_url %>
     <% end %>
-    <dt>Facebookページができました！</dt>
+    <% if display? '2012/11/23' %>
+      <dt>11/23(金)も営業しています</dt>
+      <dd>11/23は祝日ですが通常通り営業します。</dd>
+    <% end %>
+    <dt>Facebookページが便利です！</dt>
     <dd>
-    「いいね」ボタンを押していただくと、営業日のメニューやパンの売れ行き等をお知らせします！
+    「いいね」ボタンを押していただくと、営業日の商品情報やパンの売れ行き等をお知らせします！
     &#x261e; <a href="http://www.facebook.com/coupebaguette" target="_blank"><%= image_tag 'fb.png' %></a>
     </dd>
     <dt>営業時間</dt>
