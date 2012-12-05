@@ -68,6 +68,18 @@ a:visited{
 a:hover{
     color: #cd4730;
 }
+dd a:link{
+    color: #cd4730;
+    text-decoration:none;
+}
+dd a:visited{
+    color: #cd4730;
+    text-decoration:none;
+}
+dd a:hover{
+    color: #cd4730;
+    text-decoration: underline;
+}
 ul,
 ol,
 dl{
