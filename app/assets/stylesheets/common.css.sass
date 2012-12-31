@@ -1,0 +1,146 @@
+*
+  margin: 0
+  padding: 0
+  line-height: 1.5
+  color: #666
+  font-weight: normal
+  font-style: normal
+
+body
+  margin: 0 10px
+  background: #2d1f13
+  background-image: url(/assets/bg.gif)
+  background-repeat: repeat-y
+  background-position: center
+  font-family: "Trebuchet MS", Helvetica, sans-serif
+  font-size: 13px
+  *font-size: small
+  *font: x-small
+
+p
+  margin: 0.8em 0
+
+h2, h3
+  line-height: 1.2
+
+h1 a
+  display: block
+  width: 253px
+  height: 49px
+  background: transparent url(/assets/cb_logo.jpg) 0 0 no-repeat
+  text-indent: -9999px
+  overflow: hidden
+
+div
+  &#header .title
+    color: #6B492D
+  &#sitename
+    position: relative
+  &#ruby
+    top: 22px
+    left: 257px
+    position: absolute
+
+h2, #error_explanation
+  color: #cd4730
+
+h2
+  font-size: 120%
+
+h3
+  margin: 1.2em 0 0.2em 0
+  font-size: 110%
+
+a
+  &:link, &:visited
+    color: #666
+    text-decoration: none
+  &:hover
+    color: #cd4730
+
+dd a
+  &:link, &:visited
+    color: #cd4730
+    text-decoration: none
+  &:hover
+    color: #cd4730
+    text-decoration: underline
+
+ul, ol, dl
+  padding: 1px 0
+  list-style-position: inside
+
+dt
+  color: #8B4513
+  label
+    color: #8B4513
+  margin: 0.8em 0 0 0
+
+dd
+  margin: 0 0
+  p
+    margin: 0 0
+
+input, textarea
+  font-size: 90%
+  border: 1px solid #AAA
+  color: #666666
+  padding: 4px 2px
+  width: 320px
+
+.button
+  padding: 7px
+  background-color: #F5F5F5
+  border: 1px solid #AAA
+  color: #666
+  text-decoration: none
+  width: 100px
+  cursor: pointer
+  font-weight: bold
+
+div
+  &#header, &#content, &#footer
+    margin: auto
+    width: 831px
+    background-color: #FFFFFF
+    text-align: left
+    padding: 0 30px
+  &#image
+    float: left
+    width: 550px
+  &#main
+    float: right
+    width: 261px
+  &#header
+    padding-top: 6px
+    position: relative
+    ul
+      padding: 10px 0
+      &:after
+        height: 0
+        visibility: hidden
+        content: "."
+        display: block
+        clear: both
+    li
+      float: left
+      width: 130px
+      list-style-type: none
+  &#content:after
+    height: 0
+    visibility: hidden
+    content: "."
+    display: block
+    clear: both
+  &#copyright
+    margin-top: 20px
+    padding: 20px 0
+    text-align: center
+    border-top: 1px dotted #888
+
+.listalign
+  margin-left: 20px
+
+.note
+  color: #888
+  font-size: 90%
