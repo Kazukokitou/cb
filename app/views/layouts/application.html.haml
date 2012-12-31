@@ -11,7 +11,6 @@
     = google_analytics(ENV["GOOGLE_ANALYTICS_CODE"])
   %body
     %header
-      -# %h1.logo= link_to 'Coupé Baguette', '/'
       #header-sub
         #shop-copy
           小さな手作りパン工房
@@ -25,7 +24,7 @@
             %li= fb_icon
       #header-main
         #logo
-          %h1 Coupé Baguette
+          %h1= link_to 'Coupé Baguette', root_path
           #ruby
             \-クープ バゲット-
     #content
