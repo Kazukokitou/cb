@@ -1,32 +1,38 @@
-%html
+!!! 5
+%html(lang="ja")
   %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "content-type"}
-      %meta{:content => "小さな手作りパン工房、Coupé Baguette(クープ バゲット)のWebサイト。", :name => "description"}
-        %meta{:content => "西脇市,パン,パン屋,Coupé Baguette,Coupe Baguette,クープ バゲット", :name => "keywords"}
-          %link{:href => "/favicon.ico", :rel => "shortcut icon", :type => "image/x-icon"}/
-          %title Coupé Baguette クープ バゲット
-          = stylesheet_link_tag "application"
-          = csrf_meta_tag
-          %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "content-type"}
-            = google_analytics(ENV["GOOGLE_ANALYTICS_CODE"])
+    %meta(charset="utf-8")
+    %meta{:content => "小さな手作りパン工房、Coupé Baguette(クープ バゲット)のWebサイト。", :name => "description"}
+    %meta{:content => "西脇市,パン,パン屋,Coupé Baguette,Coupe Baguette,クープ バゲット", :name => "keywords"}
+    %link{:href => "/favicon.ico", :rel => "shortcut icon", :type => "image/x-icon"}/
+    %title Coupé Baguette クープ バゲット
+    = stylesheet_link_tag "application"
+    = csrf_meta_tag
+    = google_analytics(ENV["GOOGLE_ANALYTICS_CODE"])
   %body
-    #header
-      #subtitle.title 小さな手作りパン工房
-      #sitename
-        %h1= link_to 'Coupé Baguette', '/'
-        #ruby.title -クープ バゲット-
-      %ul
-        %li= link_to 'Concept', action: 'concept', controller: 'pages'
-        %li= link_to 'Menu', action: 'menu', controller: 'pages'
-        %li= link_to 'Shop Info', action: 'shop_info', controller: 'pages'
-        %li= link_to 'Contact', action: 'new', controller: 'inquiries'
-        %li
-          %a{:href => "http://lapin418.exblog.jp/"} Blog
+    %header
+      -# %h1.logo= link_to 'Coupé Baguette', '/'
+      #header-sub
+        #shop-copy
+          小さな手作りパン工房
+      #header-main
+        #logo
+          %h1 Coupé Baguette
+          #ruby
+            \-クープ バゲット-
+        %nav
+          %ul
+            %li= link_to 'Concept', action: 'concept', controller: 'pages'
+            %li= link_to 'Menu', action: 'menu', controller: 'pages'
+            %li= link_to 'Shop Info', action: 'shop_info', controller: 'pages'
+            %li= link_to 'Contact', action: 'new', controller: 'inquiries'
+            %li= link_to 'Blog', 'http://lapin418.exblog.jp'
     #content
-      = content_for?(:content) ? yield(:content) : yield
-    #footer
+      -# = content_for?(:content) ? yield(:content) : yield
+      = yield
+    %footer
       #copyright
-        %address.note Copyright (C) Coupé Baguette All rights reserved.
+        %small Copyright &copy; Coupé Baguette All rights reserved.
 
     /
       Javascripts

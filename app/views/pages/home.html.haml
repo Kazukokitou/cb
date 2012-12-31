@@ -1,25 +1,28 @@
-%h2 Information
-%dl
-  %dt 最新ブログ
-  = content_tag :dd do
-    - load_blog
-    = link_to @blog_title + @blog_date, @blog_url
-  - if display? '2012/12/22'
-    %dt 祝・開店1周年！
+%section#information
+  #primary
+    = image_tag '/assets/home2.jpg'
+  %h2 Information
+  %dl
+    %dt 最新ブログ
+    = content_tag :dd do
+      - load_blog
+      = link_to @blog_title + @blog_date, @blog_url
+    - if display? '2012/12/22'
+      %dt 祝・開店1周年！
+      %dd
+        感謝の気持ちを込めて、ささやかなプレゼントをご用意しています。詳しくは
+        %a{:href => "http://lapin418.exblog.jp/16908411/"}> こちら
+        をごらんください。
+    - if display? '2013/1/6'
+      %dt 年末年始の休業日
+      %dd 12/28(金)～1/6(日)
+    %dt Facebookページが便利です！
     %dd
-      感謝の気持ちを込めて、ささやかなプレゼントをご用意しています。詳しくは
-      %a{:href => "http://lapin418.exblog.jp/16908411/"}> こちら
-      をごらんください。
-  - if display? '2013/1/6'
-    %dt 年末年始の休業日
-    %dd 12/28(金)～1/6(日)
-  %dt Facebookページが便利です！
-  %dd
-    「いいね」ボタンを押していただくと、営業日の商品情報やパンの売れ行き等をお知らせします！
-    ☞
-    %a{:href => "http://www.facebook.com/coupebaguette", :target => "_blank"}= image_tag 'fb.png'
-  %dt 営業時間
-  %dd
-    毎週金土 10:00～売り切れまで
-    %br/
-    お取り置きもできます。(0795-27-7032)
+      「いいね」ボタンを押していただくと、営業日の商品情報やパンの売れ行き等をお知らせします！
+      ☞
+      %a{:href => "http://www.facebook.com/coupebaguette", :target => "_blank"}= image_tag 'fb.png'
+    %dt 営業時間
+    %dd
+      毎週金土 10:00～売り切れまで
+      %br/
+      お取り置きもできます。(0795-27-7032)

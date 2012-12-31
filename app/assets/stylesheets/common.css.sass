@@ -2,145 +2,93 @@
   margin: 0
   padding: 0
   line-height: 1.5
-  color: #666
+  color: #333
   font-weight: normal
   font-style: normal
 
 body
-  margin: 0 10px
-  background: #2d1f13
-  background-image: url(/assets/bg.gif)
-  background-repeat: repeat-y
-  background-position: center
-  font-family: "Trebuchet MS", Helvetica, sans-serif
-  font-size: 13px
-  *font-size: small
-  *font: x-small
+  background: #F9F9F9
+  font-family: "Helvetica","Lucida Grande","Hiragino Kaku Gothic Pro","ヒラギノ角ゴ Pro W6","ＭＳ Ｐゴシック",Osaka,sans-serif
+  font-size: 12px
 
-p
-  margin: 0.8em 0
-
-h2, h3
-  line-height: 1.2
-
-h1 a
+header, footer, nav, section
   display: block
-  width: 253px
-  height: 49px
-  background: transparent url(/assets/cb_logo.jpg) 0 0 no-repeat
-  text-indent: -9999px
-  overflow: hidden
 
-div
-  &#header .title
-    color: #6B492D
-  &#sitename
-    position: relative
-  &#ruby
-    top: 22px
-    left: 257px
-    position: absolute
+header
+  width: 880px
+  margin: 10px auto
+#header-main
+  position: relative
 
-h2, #error_explanation
-  color: #cd4730
+nav
+  position: absolute
+  top: 8px
+  right: 10px
+  li
+    float: left
+    margin-left: 10px
+    font-size: 11px
+    font-weight: bold
+    line-height: 11px
+    margin-top: 4px
+    a
+      padding: 3px
 
-h2
-  font-size: 120%
+#content
+  width: 880px
+  margin: 10px auto 0 auto
 
-h3
-  margin: 1.2em 0 0.2em 0
-  font-size: 110%
+footer
+  width: 880px
+  margin: 25px auto
+  line-height: 16px
+  padding-top: 5px
+  border-top: 1px solid #E6E6E6
 
-a
-  &:link, &:visited
-    color: #666
-    text-decoration: none
-  &:hover
-    color: #cd4730
-
-dd a
-  &:link, &:visited
-    color: #cd4730
-    text-decoration: none
-  &:hover
-    color: #cd4730
-    text-decoration: underline
-
-ul, ol, dl
-  padding: 1px 0
-  list-style-position: inside
-
-dt
-  color: #8B4513
-  label
-    color: #8B4513
-  margin: 0.8em 0 0 0
-
-dd
-  margin: 0 0
-  p
-    margin: 0 0
-
-input, textarea
-  font-size: 90%
-  border: 1px solid #AAA
-  color: #666666
-  padding: 4px 2px
-  width: 320px
-
-.button
-  padding: 7px
-  background-color: #F5F5F5
-  border: 1px solid #AAA
-  color: #666
-  text-decoration: none
-  width: 100px
-  cursor: pointer
+h1, h2, h3
+  // font-size: 100%
   font-weight: bold
 
-div
-  &#header, &#content, &#footer
-    margin: auto
-    width: 831px
-    background-color: #FFFFFF
-    text-align: left
-    padding: 0 30px
-  &#image
-    float: left
-    width: 550px
-  &#main
-    float: right
-    width: 261px
-  &#header
-    padding-top: 6px
-    position: relative
-    ul
-      padding: 10px 0
-      &:after
-        height: 0
-        visibility: hidden
-        content: "."
-        display: block
-        clear: both
-    li
-      float: left
-      width: 130px
-      list-style-type: none
-  &#content:after
-    height: 0
-    visibility: hidden
-    content: "."
-    display: block
-    clear: both
-  &#copyright
-    margin-top: 20px
-    padding: 20px 0
-    text-align: center
-    border-top: 1px dotted #888
+#logo
+  h1, div
+    display: inline
 
-.listalign
-  margin-left: 20px
+#logo h1, #ruby, #shop-copy
+  font-family: Futura
+  color: #6B492D!important
 
-.note
-  color: #888
-  font-size: 90%
+h2
+  font-size: 18px
+  font-weight: bold
+  padding: 0 0 3px 0
+  margin: 15px 0 15px 0
+  border-bottom: 1px solid #666
+
+a
+  text-decoration: none
+  &:link, &:visited
+    color: #333
+  &:active, &:hover
+    color: #7F0019
+  img
+    vertical-align: bottom
+
+li
+  list-style: none
+
+#information
+  #primary
+    img
+      width: 880px
+      height: 550px
+      -webkit-border-radius: 4px
+      -moz-border-radius: 4px
+      -ms-border-radius: 4px
+      -o-border-radius: 4px
+      border-radius: 4px
+  dl
+    dt
+      font-weight: bold
+      margin-top: 10px
+    dd
+      margin-bottom: 10px
