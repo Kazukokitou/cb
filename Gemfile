@@ -16,6 +16,8 @@ gem 'thin'
 gem 'feed-normalizer'
 gem 'newrelic_rpm'
 gem 'dekiru'
+gem "haml", ">= 3.0.0"
+gem "haml-rails"
 
 group :development, :test do
   gem 'rspec-rails', '2.6.1'

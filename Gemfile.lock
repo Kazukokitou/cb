@@ -47,6 +47,12 @@ GEM
     feed-normalizer (1.5.2)
       hpricot (>= 0.6)
       simple-rss (>= 1.1)
+    haml (3.1.7)
+    haml-rails (0.3.5)
+      actionpack (>= 3.1, < 4.1)
+      activesupport (>= 3.1, < 4.1)
+      haml (~> 3.1)
+      railties (>= 3.1, < 4.1)
     hike (1.2.1)
     hpricot (0.8.6)
     i18n (0.6.1)
@@ -136,6 +142,8 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   dekiru
   feed-normalizer
+  haml (>= 3.0.0)
+  haml-rails
   newrelic_rpm
   pg
   rails (= 3.2.8)

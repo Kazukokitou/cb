@@ -1,0 +1,27 @@
+%h2 Contact
+= form_for @inquiry do |form|
+  - if @inquiry.errors.any?
+    %p#error_explanation 未入力の項目があります。
+    %ul
+      - @inquiry.errors.full_messages.each do |msg|
+        %li= msg
+  - else
+    %p ご質問やご要望がある方は以下のフォームからお尋ねください。
+  #inputform
+    %dl
+      %dt
+        = form.label :name
+        *
+      %dd= form.text_field :name, :size => 55
+      %dt
+        = form.label :email
+        *
+      %dd= form.text_field :email, :size => 55
+      %dt= form.label :tel
+      %dd= form.text_field :tel, :size => 55
+      %dt
+        = form.label :text
+        *
+      %dd= form.text_area :text, :size => "40x8"
+  %p
+    = form.submit '送信する', :class => 'button'
