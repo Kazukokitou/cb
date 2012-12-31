@@ -25,4 +25,5 @@ group :development, :test do
   gem 'webrat', '0.7.1'
   gem 'sqlite3', '~> 1.3.0'
   gem 'heroku_san'
+  gem 'letter_opener'
 end

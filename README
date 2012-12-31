@@ -1,7 +1,5 @@
 REQUIRED ENV VALUES
 
 CB_MAIL_FR:                 (Mail-from address)
-CB_MAIL_PW:                 (Password)
 CB_MAIL_TO:                 (Mail-to address)
-CB_MAIL_USER:               (Mail sender account)
 GOOGLE_ANALYTICS_CODE:      (Google analytics code)

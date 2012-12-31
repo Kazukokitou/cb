@@ -1,0 +1,2 @@
+export CB_MAIL_FR=someone@somewhere.com
+export CB_MAIL_TO=owner@bread.com
