@@ -1,5 +1,5 @@
 production: 
-  app: coupe-baguette
+  app: coupe-baguette-cedar
   stack: cedar
   tag: production/*
   config:
