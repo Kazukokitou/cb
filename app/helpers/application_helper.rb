@@ -5,6 +5,6 @@ module ApplicationHelper
   end
 
   def fb_icon
-    link_to image_tag('fb.png'),  "http://www.facebook.com/coupebaguette", target: '_blank'
+    link_to image_tag('fb.png'),  "http://www.facebook.com/coupebaguette", target: '_blank', class: 'fb-icon'
   end
 end
