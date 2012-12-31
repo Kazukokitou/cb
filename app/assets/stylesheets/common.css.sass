@@ -90,26 +90,53 @@ a.fb-icon
 li
   list-style: none
 
-#information
-  #primary
-    position: relative
-    dl
-      background-color: rgba(255, 255, 255, 0.8)
-      position: absolute
-      width: 310px
-      padding: 20px
-      margin: 15px
-      top: 0
-      right: 0
-      @include border-radius(4px)
-      dt
-        font-weight: bold
-        margin-top: 10px
-        color: $accent-color
-      dd
-        margin-bottom: 10px
+#primary
+  position: relative
+  dl
+    background-color: rgba(255, 255, 255, 0.8)
+    position: absolute
+    width: 310px
+    padding: 20px
+    margin: 15px
+    top: 0
+    right: 0
+    @include border-radius(4px)
+    dt
+      font-weight: bold
+      margin-top: 10px
+      color: $accent-color
+    dd
+      margin-bottom: 10px
+
 #primary-image
   img
     width: 880px
     height: 550px
     @include border-radius(4px)
+
+#concept
+  &::after
+    content: ''
+    display: block
+    clear: both
+  .secondary
+    float: left
+    width: 430px
+    img
+      width: 430px
+      height: 270px
+      @include border-radius(4px)
+    h3
+      font-size: 16px
+      margin: 5px 0 10px 0
+    p
+      font-size: 1.1em
+      line-height: 1.7
+
+#material
+  margin-right: 20px
+
+#concept-copy
+  font-size: 1.5em
+  font-weight: bold
+  margin: 10px 0 30px 0
