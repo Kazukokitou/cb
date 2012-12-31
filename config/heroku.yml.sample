@@ -1,0 +1,21 @@
+production:
+  app: (heroku app name)
+  stack: cedar
+  tag: production/*
+  config:
+    BUNDLE_WITHOUT: "development:test"
+    TZ: Asia/Tokyo
+    CB_MAIL_FR: (Mail-from address)
+    CB_MAIL_TO: (Mail-to address)
+    GOOGLE_ANALYTICS_CODE: (Google analytics code)
+
+staging:
+  app: (heroku app name)
+  stack: cedar
+  config: &default
+    BUNDLE_WITHOUT: "development:test"
+    RACK_ENV: staging
+    RAILS_ENV: staging
+    TZ: Asia/Tokyo
+    CB_MAIL_FR: (Mail-from address)
+    CB_MAIL_TO: (Mail-to address)
