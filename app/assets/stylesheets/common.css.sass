@@ -5,11 +5,14 @@
   -o-border-radius: $radius
   border-radius: $radius
 
+$font-color: #333
+$accent-color: #AC1B4E
+
 *
   margin: 0
   padding: 0
   line-height: 1.5
-  color: #333
+  color: $font-color
   font-weight: normal
   font-style: normal
 
@@ -72,9 +75,9 @@ h2
 a
   text-decoration: none
   &:link, &:visited
-    color: #333
+    color: $font-color
   &:active, &:hover
-    color: #7F0019
+    color: $accent-color
   img
     vertical-align: bottom
 
@@ -96,7 +99,7 @@ li
       dt
         font-weight: bold
         margin-top: 10px
-        color: #AC1B4E
+        color: $accent-color
       dd
         margin-bottom: 10px
 #primary-image
