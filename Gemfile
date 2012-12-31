@@ -23,4 +23,5 @@ group :development, :test do
   gem 'rspec-rails', '2.6.1'
   gem 'webrat', '0.7.1'
   gem 'sqlite3', '~> 1.3.0'
+  gem 'heroku_san'
 end
