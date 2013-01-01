@@ -12,12 +12,20 @@
 $font-color: #333
 $accent-color: #AC1B4E
 
+$font-size: 13px
+$font-size-s: $font-size - 1px
+$font-size-l: $font-size + 1px
+$font-size-ll: $font-size + 7px
+$font-size-h1: $font-size + 13px
+$font-size-h2: $font-size + 5px
+$font-size-h3: $font-size + 3px
+
 *
   margin: 0
   padding: 0
   line-height: 1.5
   color: $font-color
-  font-size: 13px
+  font-size: $font-size
   font-weight: normal
   font-style: normal
 
@@ -41,7 +49,7 @@ nav
   li
     float: left
     margin-left: 20px
-    font-size: 0.9em
+    font-size: $font-size-s
     font-weight: bold
     a
       padding: 5px
@@ -69,11 +77,11 @@ h1, h2, h3
   color: #6B492D!important
 
 h1 a
-  font-size: 2.0em
+  font-size: $font-size-h1
   font-weight: bold
 
 h2
-  font-size: 1.4em
+  font-size: $font-size-h2
   font-weight: bold
   padding: 0 0 3px 0
   margin: 15px 0 15px 0
@@ -86,7 +94,6 @@ a
   &:active, &:hover
     color: $accent-color
   img
-    vertical-align: bottom
     border: none
 
 a.fb-icon
@@ -130,17 +137,17 @@ li
       height: 270px
       @include border-radius(4px)
     h3
-      font-size: 1.2em
+      font-size: $font-size-h3
       margin: 5px 0 10px 0
     p
-      font-size: 1.1em
+      font-size: $font-size-l
       line-height: 1.7
 
 #material
   margin-right: 20px
 
 #concept-copy
-  font-size: 1.5em
+  font-size: $font-size-ll
   margin: 10px 0 30px 0
 
 #menu-list
@@ -160,6 +167,7 @@ li
           vertical-align: bottom
           @include border-radius(4px)
         figcaption
+          font-size: $font-size-l
           margin-top: 3px
 
 #menu-note
@@ -183,8 +191,8 @@ li
   dl.business-hours
     dt
       color: $font-color
-  .note
-    font-size: 0.9em
+  .note, .note a
+    font-size: $font-size-s
 
 #contact
   .primary-content
@@ -201,7 +209,7 @@ li
 
 #input-form
   input, textarea
-    font-size: 0.9em
+    font-size: $font-size-s
     border: 1px solid #AAA
     color: #666666
     padding: 4px 2px
@@ -221,7 +229,7 @@ li
     color: rgba(255, 255,  255, .9)
     text-align: center
     padding: 10px 30px
-    font-size: 1.1em
+    font-size: $font-size-l
     line-height: 1em
     font-weight: bold
     &:hover
