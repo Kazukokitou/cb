@@ -21,7 +21,7 @@ body
   font-family: "Helvetica","Lucida Grande","Hiragino Kaku Gothic Pro","ヒラギノ角ゴ Pro W6","ＭＳ Ｐゴシック",Osaka,sans-serif
   font-size: 13px
 
-header, footer, nav, section
+header, footer, nav, section, figure, figcaption
   display: block
 
 header
@@ -140,3 +140,27 @@ li
   font-size: 1.5em
   font-weight: bold
   margin: 10px 0 30px 0
+
+#menu-list
+  ul
+    margin-right: -20px
+    letter-spacing: -.40em
+    li
+      display: inline-block
+      width: 280px
+      margin: 5px 20px 20px 0
+      vertical-align: top
+      letter-spacing: normal
+      figure
+        img
+          width: 280px
+          height: 175px
+          vertical-align: bottom
+          @include border-radius(4px)
+        figcaption
+          margin-top: 3px
+
+#menu-note
+  margin-top: 10px
+  li
+    margin-top: 10px

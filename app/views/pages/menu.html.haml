@@ -1,19 +1,44 @@
-%h2 Menu
-%dl
-  %dt 山型食パン (1/2斤)
-  %dd 350円
-  %dt カンパーニュ (プレーン)
-  %dd 600円 *
-  %dt カンパーニュ (チーズ入り)
-  %dd 700円 *
-  %dt バゲット
-  %dd 350円
-  %dt ベーグル
-  %dd 200円
-  %dt 菓子パン
-  %dd 150円
-%p.note
-  * ハーフサイズはそれぞれ半額です。
-  %br/
-  * Facebookページでその日のメニューをお知らせしています。 ☞
-  %a{:href => "http://www.facebook.com/coupebaguette", :target => "_blank"}= image_tag 'fb.png'
+%section#menu
+  %h2 Menu
+  %section#menu-list
+    %ul
+      %li
+        %figure
+          = image_tag 'menu_shokupan.jpg'
+          %figcaption
+            山型食パン
+            700円 *
+      %li
+        %figure
+          = image_tag 'menu_campagne.jpg'
+          %figcaption
+            カンパーニュ (プレーン)
+            600円 *
+            %br
+            カンパーニュ (チーズ入り)
+            700円 *
+      %li
+        %figure
+          = image_tag 'menu_baguette.jpg'
+          %figcaption
+            バゲット
+            350円
+      %li
+        %figure
+          = image_tag 'menu_bagel.jpg'
+          %figcaption
+            ベーグル
+            200円
+      %li
+        %figure
+          = image_tag 'menu_pastry.jpg'
+          %figcaption
+            菓子パン
+            150円
+  %section#menu-note
+    %ul
+      %li
+        * ハーフサイズはそれぞれ半額です。
+      %li
+        営業日ごとにバリエーションが変わります。その日のメニューはFacebookページでお知らせしています。
+        = fb_link
