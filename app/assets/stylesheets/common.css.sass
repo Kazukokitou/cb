@@ -92,14 +92,10 @@ li
 
 #primary
   position: relative
-  dl
-    background-color: rgba(255, 255, 255, 0.8)
+  dl.primary-content
     position: absolute
-    width: 310px
     padding: 20px
     margin: 15px
-    top: 0
-    right: 0
     @include border-radius(4px)
     dt
       font-weight: bold
@@ -164,3 +160,22 @@ li
   margin-top: 10px
   li
     margin-top: 10px
+
+#information
+  dl.primary-content
+    width: 310px
+    top: 0
+    right: 0
+    background-color: rgba(255, 255, 255, 0.7)
+
+#shop-info
+  dl.primary-content
+    width: 370px
+    top: 0
+    left: 0
+    background-color: rgba(255, 255, 255, 0.8)
+  dl.business-hours
+    dt
+      color: $font-color
+  .note
+    font-size: 0.9em
