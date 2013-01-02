@@ -5,7 +5,7 @@
   %h2 Shop Info
   #primary
     #primary-image
-      = image_tag 'shop_info2.jpg'
+      = image_tag 'pages/shop_info/primary.jpg'
     %dl.primary-content
       %dt
         Address
@@ -24,7 +24,7 @@
         2台
         .note
           * 当店西隣の敷地は私有地です。駐車はご遠慮ください。
-          = link_to '[図で見る]', "javascript:tempWin.focus()", onclick: "tempWin=window.open('/assets/parking.png','parking')"
+          = link_to '[図で見る]', "javascript:tempWin.focus()", onclick: "tempWin=window.open('#{image_path 'pages/shop_info/parking.jpg'}','parking')"
       %dt
         営業時間
       %dd
