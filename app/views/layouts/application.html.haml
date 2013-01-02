@@ -5,7 +5,11 @@
     %meta{:content => "小さな手作りパン工房、Coupé Baguette(クープ バゲット)のWebサイト。", :name => "description"}
     %meta{:content => "西脇市,パン,パン屋,Coupé Baguette,Coupe Baguette,クープ バゲット", :name => "keywords"}
     %link{:href => "/favicon.ico", :rel => "shortcut icon", :type => "image/x-icon"}/
-    %title Coupé Baguette クープ バゲット
+    %title 
+      - if content_for? :title
+        = yield :title
+        |
+      Coupé Baguette クープ バゲット
     = stylesheet_link_tag "application"
     / Le HTML5 shim, for IE6-8 support of HTML elements
     /[if lt IE 9]
