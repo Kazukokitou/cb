@@ -28,4 +28,5 @@ group :development, :test do
   gem 'sqlite3', '~> 1.3.0'
   gem 'heroku_san'
   gem 'letter_opener'
+  gem 'i18n_generators'
 end

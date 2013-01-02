@@ -40,16 +40,16 @@
               %dt
                 = form.label :name
                 *
-              %dd= form.text_field :name, :size => 55, :required => true
+              %dd= form.text_field :name, size: 55, required: true
               %dt
                 = form.label :email
                 *
-              %dd= form.text_field :email, :size => 55, :type => 'email', :required => true
-              %dt= form.label :tel, :type => 'tel'
-              %dd= form.text_field :tel, :size => 55
+              %dd= form.text_field :email, size: 55, type: 'email', required: true
+              %dt= form.label :tel, type: 'tel'
+              %dd= form.text_field :tel, size: 55
               %dt
                 = form.label :text
                 *
-              %dd= form.text_area :text, :size => "40x8", :required => true
+              %dd= form.text_area :text, size: "40x8", required: true
             .buttons
-              = form.submit '送信する', :class => 'button'
+              = form.submit '送信する', class: 'button'
