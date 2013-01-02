@@ -7,3 +7,5 @@
 ##MEMO
 
 - Using sendgrid
+
+- Blog data should be updated by the rake task: `update_blog_info`
