@@ -1,5 +1,4 @@
 class PagesController < ApplicationController
-  # layout "pages"
   def home
   end
 
@@ -11,5 +10,4 @@ class PagesController < ApplicationController
 
   def shop_info
   end
-
 end
