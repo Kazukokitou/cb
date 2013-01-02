@@ -13,8 +13,8 @@
   background: rgb(255, 255, 255) /* for IE6-8 */
   background: rgba(255, 255, 255, $rate)
 
-@mixin cb-box-shadow
-  @include box-shadow(rgba(0, 0, 0, .25) 0 0 5px)
+@mixin cb-box-shadow($rate: .25)
+  @include box-shadow(rgba(0, 0, 0, $rate) 0 0 5px)
 
 $font-color: #333
 $accent-color: #AC1B4E
@@ -123,6 +123,7 @@ li
     padding: 20px
     margin: 15px
     @include border-radius(4px)
+    @include cb-box-shadow(.35)
     dt
       font-weight: bold
       margin-top: 10px
