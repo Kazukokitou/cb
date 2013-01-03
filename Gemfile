@@ -21,6 +21,7 @@ gem 'dekiru'
 gem "haml", ">= 3.0.0"
 gem "haml-rails"
 gem "jquery-rails"
+gem "jquery-ui-rails"
 
 group :development, :test do
   gem 'rspec-rails', '2.6.1'
