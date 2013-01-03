@@ -1,56 +1,25 @@
-- content_for :title do
-  Contact
-
-%section#contact
-  %h2 Contact
-  #primary
-    #primary-image= image_tag 'inquiries/primary.jpg'
-    - if @completed
-      %section.primary-content.on-complete
-        %section#complete-message
-          %h3 送信が完了しました
-          #complete-message
-            %p
-              折り返しご連絡させていただきますので、しばらくお待ちください。
-              %br
-              返信まで2〜3日かかる場合があります。
-              %br
-              返信がない場合、メールアドレスに間違いがないか、PCメールの受信拒否設定が解除されているかどうかをご確認の上、再度ご連絡ください。
-        %section#input-confirm
-          %h3 送信内容
-          %dl
-            %dt= Inquiry.human_attribute_name 'name'
-            %dd= @inquiry.name
-            %dt= Inquiry.human_attribute_name 'email'
-            %dd= simple_format @inquiry.email
-            %dt= Inquiry.human_attribute_name 'tel'
-            %dd= @inquiry.tel.empty? ? '(未入力)' : @inquiry.tel
-            %dt= Inquiry.human_attribute_name 'text'
-            %dd= simple_format @inquiry.text
-    - else
-      %section.primary-content
-        = form_for @inquiry do |form|
-          - if @inquiry.errors.any?
-            %p#error_explanation 未入力の項目があります。
-            %ul
-              - @inquiry.errors.full_messages.each do |msg|
-                %li= msg
-          - else
-            %p ご質問やご要望がある方は以下のフォームからお尋ねください。
-          #input-form
-            %dl
-              %dt
-                = form.label :name
-                *
-              %dd= form.text_field :name, size: 55, required: true
-              %dt
-                = form.label :email
-                *
-              %dd= form.text_field :email, size: 55, type: 'email', required: true
-              %dt= form.label :tel, type: 'tel'
-              %dd= form.text_field :tel, size: 55
-              %dt
-                = form.label :text
-                *
-              %dd= form.text_area :text, size: "40x8", required: true
-            .buttons= form.submit '送信する', class: 'button'
+%section.primary-content
+  = form_for @inquiry do |form|
+    %p ご質問やご要望がある方は以下のフォームからお尋ねください。
+    - if @inquiry.errors.any?
+      %p#error_explanation 未入力の項目があります。
+      %ul
+        - @inquiry.errors.full_messages.each do |msg|
+          %li= msg
+    #input-form
+      %dl
+        %dt
+          = form.label :name
+          *
+        %dd= form.text_field :name, size: 55, required: true
+        %dt
+          = form.label :email
+          *
+        %dd= form.text_field :email, size: 55, type: 'email', required: true
+        %dt= form.label :tel, type: 'tel'
+        %dd= form.text_field :tel, size: 55
+        %dt
+          = form.label :text
+          *
+        %dd= form.text_area :text, size: "40x8", required: true
+      .buttons= form.submit '送信する', class: 'button'

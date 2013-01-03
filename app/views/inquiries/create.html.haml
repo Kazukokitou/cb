@@ -1,0 +1,21 @@
+%section.primary-content.on-complete
+  %section#complete-message
+    %h3 送信が完了しました
+    #complete-message
+      %p
+        折り返しご連絡させていただきますので、しばらくお待ちください。
+        %br
+        返信まで2〜3日かかる場合があります。
+        %br
+        返信がない場合、メールアドレスに間違いがないか、PCメールの受信拒否設定が解除されているかどうかをご確認の上、再度ご連絡ください。
+  %section#input-confirm
+    %h3 送信内容
+    %dl
+      %dt= Inquiry.human_attribute_name 'name'
+      %dd= @inquiry.name
+      %dt= Inquiry.human_attribute_name 'email'
+      %dd= simple_format @inquiry.email
+      %dt= Inquiry.human_attribute_name 'tel'
+      %dd= @inquiry.tel.empty? ? '(未入力)' : @inquiry.tel
+      %dt= Inquiry.human_attribute_name 'text'
+      %dd= simple_format @inquiry.text

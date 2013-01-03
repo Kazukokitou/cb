@@ -1,0 +1,11 @@
+- content_for :title do
+  Contact
+
+- content_for :content do
+  %section#contact
+    %h2 Contact
+    #primary
+      #primary-image= image_tag 'inquiries/primary.jpg'
+      = yield
+
+= render file: 'layouts/application'

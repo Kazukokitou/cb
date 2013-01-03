@@ -31,9 +31,9 @@
       #header-main
         #logo
           %h1= link_to image_tag('cb_logo.png', alt: 'Coupé Baguette'), root_path
-          #ruby \-クープ バゲット-
+          #ruby -クープ バゲット-
     #content
-      = yield
+      = content_for?(:content) ? yield(:content) : yield
     %footer
       #copyright
         %small Copyright &copy; Coupé Baguette All rights reserved.
