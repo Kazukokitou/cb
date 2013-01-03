@@ -16,7 +16,9 @@
 @mixin cb-box-shadow($rate: .25)
   @include box-shadow(rgba(0, 0, 0, $rate) 0 0 5px)
 
+$logo-color: #6B492D
 $font-color: #333
+$font-color-light: #666
 $accent-color: #AC1B4E
 $hover-color: #CD4730
 
@@ -73,6 +75,8 @@ footer
   line-height: 16px
   padding-top: 5px
   border-top: 1px solid #E6E6E6
+  small
+    color: $font-color-light
 
 h1, h2, h3
   font-weight: bold
@@ -86,7 +90,7 @@ h1, h2, h3
     display: inline
 
 #logo h1 a, #ruby, #shop-copy
-  color: #6B492D!important
+  color: $logo-color !important
 
 h1 a
   font-size: $font-size-h1
@@ -152,9 +156,11 @@ li
       @include border-radius(4px)
       @include cb-box-shadow
     h3
+      color: $font-color-light
       font-size: $font-size-h3
       margin: 5px 0 10px 0
     p
+      color: $font-color-light
       font-size: $font-size-l
       line-height: 1.7
 
@@ -162,6 +168,7 @@ li
   margin-right: 40px
 
 #concept-copy
+  color: $font-color-light
   font-size: $font-size-ll
   font-weight: bold
   margin: 10px 0 30px 0
@@ -189,8 +196,6 @@ li
 
 #menu-note
   margin-top: 10px
-  li
-    margin-top: 10px
 
 #information
   dl.primary-content
