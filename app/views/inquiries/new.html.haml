@@ -4,16 +4,18 @@
 %section#contact
   %h2 Contact
   #primary
-    #primary-image
-      = image_tag 'inquiries/primary.jpg'
+    #primary-image= image_tag 'inquiries/primary.jpg'
     - if @completed
       %section.primary-content.on-complete
         %section#complete-message
           %h3 送信が完了しました
           #complete-message
-            %p 折り返しご連絡させていただきますので、しばらくお待ちください。
-            %p 返信まで2〜3日かかる場合があります。
-            %p 返信がない場合、メールアドレスに間違いがないか、PCメールの受信拒否設定が解除されているかどうかをご確認の上、再度ご連絡ください。
+            %p
+              折り返しご連絡させていただきますので、しばらくお待ちください。
+              %br
+              返信まで2〜3日かかる場合があります。
+              %br
+              返信がない場合、メールアドレスに間違いがないか、PCメールの受信拒否設定が解除されているかどうかをご確認の上、再度ご連絡ください。
         %section#input-confirm
           %h3 送信内容
           %dl
@@ -51,5 +53,4 @@
                 = form.label :text
                 *
               %dd= form.text_area :text, size: "40x8", required: true
-            .buttons
-              = form.submit '送信する', class: 'button'
+            .buttons= form.submit '送信する', class: 'button'

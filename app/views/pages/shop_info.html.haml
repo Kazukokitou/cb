@@ -4,41 +4,33 @@
 %section#shop-info
   %h2 Shop Info
   #primary
-    #primary-image
-      = image_tag 'pages/shop_info/primary.jpg'
+    #primary-image= image_tag 'pages/shop_info/primary.jpg'
     %dl.primary-content
-      %dt
-        Address
+      %dt Address
       %dd
         %address
           兵庫県西脇市板波町51-7
-          = link_to '[Map]', "http://maps.google.co.jp/maps?f=q&source=embed&hl=ja&geocode=&q=%E5%85%B5%E5%BA%AB%E7%9C%8C%E8%A5%BF%E8%84%87%E5%B8%82%E6%9D%BF%E6%B3%A2%E7%94%BA%EF%BC%95%EF%BC%91%E2%88%92%EF%BC%97&aq=0&sll=34.689441,135.192462&sspn=0.009228,0.0159&vpsrc=0&brcurrent=3,0x35553504aea813cd:0xa5c28b276d14afd9,0,0x35553504aea813cd:0x968ea09456c678a7&ie=UTF8&hq=&hnear=%E5%85%B5%E5%BA%AB%E7%9C%8C%E8%A5%BF%E8%84%87%E5%B8%82%E6%9D%BF%E6%B3%A2%E7%94%BA%EF%BC%95%EF%BC%91%E2%88%92%EF%BC%97&t=m&ll=34.965311,134.971762&spn=0.021101,0.025749&z=14&iwloc=A", target: "_blank"
-      %dt
-        Tel
+          - map_url = "http://maps.google.co.jp/maps?f=q&source=embed&hl=ja&geocode=&q=%E5%85%B5%E5%BA%AB%E7%9C%8C%E8%A5%BF%E8%84%87%E5%B8%82%E6%9D%BF%E6%B3%A2%E7%94%BA%EF%BC%95%EF%BC%91%E2%88%92%EF%BC%97&aq=0&sll=34.689441,135.192462&sspn=0.009228,0.0159&vpsrc=0&brcurrent=3,0x35553504aea813cd:0xa5c28b276d14afd9,0,0x35553504aea813cd:0x968ea09456c678a7&ie=UTF8&hq=&hnear=%E5%85%B5%E5%BA%AB%E7%9C%8C%E8%A5%BF%E8%84%87%E5%B8%82%E6%9D%BF%E6%B3%A2%E7%94%BA%EF%BC%95%EF%BC%91%E2%88%92%EF%BC%97&t=m&ll=34.965311,134.971762&spn=0.021101,0.025749&z=14&iwloc=A"
+          = link_to '[Map]', map_url, target: "_blank"
+      %dt Tel
       %dd
-        %address
-          0795-27-7032
-      %dt
-        Parking
+        %address 0795-27-7032
+      %dt Parking
       %dd
         2台
         .note
           * 当店西隣の敷地は私有地です。駐車はご遠慮ください。
           = link_to '[図で見る]', "javascript:tempWin.focus()", onclick: "tempWin=window.open('#{image_path 'pages/shop_info/parking.jpg'}','parking')"
-      %dt
-        営業時間
+      %dt 営業時間
       %dd
         %dl.business-hours
-          %dt
-            金・土
+          %dt 金・土
           %dd
             10:00 &#xFF5E; 売り切れまで
             .note
               * 売り切れた場合はFacebookページでお知らせします。
               = fb_link
-          %dt
-            月 &#xFF5E; 木
+          %dt 月 &#xFF5E; 木
           %dd
             オーダーのみ
-            .note
-              * オーダー可能なパンは山型食パン、バゲット、カンパーニュの3種類です。お渡し日の2日前までにご連絡ください。
+            .note * オーダー可能なパンは山型食パン、バゲット、カンパーニュの3種類です。お渡し日の2日前までにご連絡ください。

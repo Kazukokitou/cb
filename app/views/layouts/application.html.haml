@@ -2,10 +2,10 @@
 %html(lang="ja")
   %head
     %meta(charset="utf-8")
-    %meta{:content => "小さな手作りパン工房、Coupé Baguette(クープ バゲット)のWebサイト。", :name => "description"}
-    %meta{:content => "西脇市,パン,パン屋,Coupé Baguette,Coupe Baguette,クープ バゲット", :name => "keywords"}
-    %link{:href => "/favicon.ico", :rel => "shortcut icon", :type => "image/x-icon"}/
-    %title 
+    %meta{content: "小さな手作りパン工房、Coupé Baguette(クープ バゲット)のWebサイト。", name: "description"}
+    %meta{content: "西脇市,パン,パン屋,Coupé Baguette,Coupe Baguette,クープ バゲット", name: "keywords"}
+    %link{href: "/favicon.ico", rel: "shortcut icon", type: "image/x-icon"}/
+    %title
       - if content_for? :title
         = yield :title
         |
@@ -19,8 +19,7 @@
   %body
     %header
       #header-sub
-        #shop-copy
-          小さな手作りパン工房
+        #shop-copy 小さな手作りパン工房
         %nav
           %ul
             %li= link_to 'Concept', action: 'concept', controller: 'pages'
@@ -32,14 +31,12 @@
       #header-main
         #logo
           %h1= link_to image_tag('cb_logo.png', alt: 'Coupé Baguette'), root_path
-          #ruby
-            \-クープ バゲット-
+          #ruby \-クープ バゲット-
     #content
       = yield
     %footer
       #copyright
         %small Copyright &copy; Coupé Baguette All rights reserved.
-
     /
       Javascripts
       \==================================================
