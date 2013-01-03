@@ -18,6 +18,7 @@
 
 $logo-color: #6B492D
 $font-color: #333
+$font-color-header: #444
 $font-color-light: #666
 $accent-color: #AC1B4E
 $hover-color: #CD4730
@@ -97,7 +98,7 @@ h1 a
   font-weight: bold
 
 h2
-  color: #444
+  color: $font-color-header
   font-size: $font-size-h2
   font-weight: bold
   padding: 0 0 3px 0
@@ -213,7 +214,7 @@ li
     @include bg-rgba(0.8)
   dl.business-hours
     dt
-      color: $font-color
+      color: $font-color-header
   .note, .note a
     font-size: $font-size-s
 
