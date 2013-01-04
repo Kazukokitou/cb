@@ -1,15 +1,16 @@
-- blog_info = BlogInfo.first
-
 %section#information
   %h2 Information
   #primary
     #primary-image= image_tag 'informations/primary.jpg'
     %dl.primary-content
-      %dt 最新ブログ
-      %dd= link_to "#{blog_info.title} (#{l blog_info.published_at})", blog_info.url
+      - if blog_info = BlogInfo.first
+        %dt 最新ブログ
+        %dd= link_to "#{blog_info.title} (#{l blog_info.published_at})", blog_info.url
+
       - if display? '2013/1/6'
         %dt 年末年始の休業日
         %dd 12/28(金) &#xFF5E; 1/6(日)
+
       %dt Facebookページが便利です！
       %dd
         「いいね!」ボタンを押していただくと、営業日の商品情報やパンの売れ行き等をお知らせします！ ☞
