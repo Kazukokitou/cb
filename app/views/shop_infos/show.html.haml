@@ -4,7 +4,7 @@
 %section#shop-info
   %h2 Shop Info
   #primary
-    #primary-image= image_tag 'pages/shop_info/primary.jpg'
+    #primary-image= image_tag 'shop_infos/primary.jpg'
     %dl.primary-content
       %dt Address
       %dd
@@ -20,7 +20,7 @@
         2台
         .note
           * 当店西隣の敷地は私有地です。駐車はご遠慮ください。
-          = link_to '', "javascript:tempWin.focus()", onclick: "tempWin=window.open('#{image_path 'pages/shop_info/parking.jpg'}','parking')", class: 'ui-icon ui-icon-newwin'
+          = link_to '', "javascript:tempWin.focus()", onclick: "tempWin=window.open('#{image_path 'shop_infos/parking.jpg'}','parking')", class: 'ui-icon ui-icon-newwin'
       %dt 営業時間
       %dd
         %dl.business-hours

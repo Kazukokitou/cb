@@ -1,13 +1,14 @@
 Cb::Application.routes.draw do
-  resources :inquiries, :only => [:create, :new]
+  resources :inquiries, only: %w(create new)
 
-  get "pages/home"
+  resource :concept, only: :show
+  resource :menu, only: :show
+  resource :shop_info, only: :show
 
-  get "pages/concept"
+  root to: "homes#show"
 
-  get "pages/menu"
-
-  get "pages/shop_info"
-
-  root :to => "pages#home"
+  # Keep old paths
+  match "pages/concept" => redirect('/concept')
+  match "pages/menu" => redirect('/menu')
+  match "pages/shop_info" => redirect('/shop_info')
 end

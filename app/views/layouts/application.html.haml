@@ -22,10 +22,10 @@
         #shop-copy 小さな手作りパン工房
         %nav
           %ul
-            %li= link_to 'Concept', action: 'concept', controller: 'pages'
-            %li= link_to 'Menu', action: 'menu', controller: 'pages'
-            %li= link_to 'Shop Info', action: 'shop_info', controller: 'pages'
-            %li= link_to 'Contact', action: 'new', controller: 'inquiries'
+            %li= link_to 'Concept', concept_path
+            %li= link_to 'Menu', menu_path
+            %li= link_to 'Shop Info', shop_info_path
+            %li= link_to 'Contact', new_inquiry_path
             %li= link_to 'Blog', 'http://lapin418.exblog.jp'
             %li= fb_icon
       #header-main
