@@ -11,11 +11,11 @@
   %section#input-confirm
     %h3 送信内容
     %dl
-      %dt= Inquiry.human_attribute_name 'name'
-      %dd= @inquiry.name
-      %dt= Inquiry.human_attribute_name 'email'
-      %dd= simple_format @inquiry.email
-      %dt= Inquiry.human_attribute_name 'tel'
-      %dd= @inquiry.tel.empty? ? '(未入力)' : @inquiry.tel
-      %dt= Inquiry.human_attribute_name 'text'
-      %dd= simple_format @inquiry.text
+      %dt= Contact.human_attribute_name 'name'
+      %dd= @contact.name
+      %dt= Contact.human_attribute_name 'email'
+      %dd= simple_format @contact.email
+      %dt= Contact.human_attribute_name 'tel'
+      %dd= @contact.tel.empty? ? '(未入力)' : @contact.tel
+      %dt= Contact.human_attribute_name 'text'
+      %dd= simple_format @contact.text

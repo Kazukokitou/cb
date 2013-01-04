@@ -1,10 +1,10 @@
 %section.primary-content
-  = form_for @inquiry, url: inquiry_path do |form|
+  = form_for @contact, url: contact_path do |form|
     %p ご質問やご要望がある方は以下のフォームからお尋ねください。
-    - if @inquiry.errors.any?
+    - if @contact.errors.any?
       %p#error_explanation 未入力の項目があります。
       %ul
-        - @inquiry.errors.full_messages.each do |msg|
+        - @contact.errors.full_messages.each do |msg|
           %li= msg
     #input-form
       %dl

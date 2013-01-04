@@ -1,5 +1,5 @@
 #http://stackoverflow.com/questions/7275496/tableless-model-in-rails-3-1
-class Inquiry
+class Contact
   include ActiveModel::Validations
   include ActiveModel::Conversion
   extend ActiveModel::Naming

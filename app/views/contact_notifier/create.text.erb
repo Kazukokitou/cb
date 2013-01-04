@@ -1,0 +1,11 @@
+<%= Contact.human_attribute_name 'name' %>
+<%= @contact.name %>
+
+<%= Contact.human_attribute_name 'email' %>
+<%= @contact.email %>
+
+<%= Contact.human_attribute_name 'tel' %>
+<%= @contact.tel.empty? ? '(未入力)' : @contact.tel %>
+
+<%= Contact.human_attribute_name 'text' %>
+<%= @contact.text %>
