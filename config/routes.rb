@@ -5,6 +5,8 @@ Cb::Application.routes.draw do
   resource :shop_info, only: :show
   resource :inquiry, only: %w(create new)
 
+  match '*path' => redirect('/') unless Rails.env.development?
+
   # Keep old paths
   match "pages/concept" => redirect('/concept')
   match "pages/menu" => redirect('/menu')
