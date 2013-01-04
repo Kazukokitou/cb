@@ -1,5 +1,5 @@
 %section.primary-content
-  = form_for @inquiry do |form|
+  = form_for @inquiry, url: inquiry_path do |form|
     %p ご質問やご要望がある方は以下のフォームからお尋ねください。
     - if @inquiry.errors.any?
       %p#error_explanation 未入力の項目があります。
