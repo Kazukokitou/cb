@@ -1,5 +1,5 @@
 Cb::Application.routes.draw do
-  root to: "homes#show"
+  root to: "informations#show"
   resource :concept, only: :show
   resource :menu, only: :show
   resource :shop_info, only: :show
