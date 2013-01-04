@@ -3,7 +3,7 @@ Cb::Application.routes.draw do
   resource :concept, only: :show
   resource :menu, only: :show
   resource :shop_info, only: :show
-  resource :inquiry, only: %w(create new)
+  resource :inquiry, only: %w(show create)
 
   match '*path' => redirect('/') unless Rails.env.development?
 
@@ -11,5 +11,5 @@ Cb::Application.routes.draw do
   match "pages/concept" => redirect('/concept')
   match "pages/menu" => redirect('/menu')
   match "pages/shop_info" => redirect('/shop_info')
-  match "inquiries/new" => redirect('/inquiry/new')
+  match "inquiries/new" => redirect('/inquiry')
 end

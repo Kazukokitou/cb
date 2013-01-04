@@ -1,5 +1,5 @@
 class InquiriesController < ApplicationController
-  def new
+  def show
     @inquiry = Inquiry.new
   end
 
@@ -9,7 +9,7 @@ class InquiriesController < ApplicationController
       InquiryNotifier.create(@inquiry).deliver
     else
       respond_to do |f|
-        f.html { render action: "new" }
+        f.html { render action: "show" }
       end
     end
   end
