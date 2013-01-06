@@ -1,0 +1,92 @@
+@mixin bootstrap-select
+  background-color: white
+  border: 1px solid #CCC
+  line-height: 30px
+  display: inline-block
+  height: 20px
+  padding: 4px 6px
+  margin-bottom: 10px
+  font-size: 14px
+  line-height: 20px
+  color: #555
+  vertical-align: middle
+  -webkit-border-radius: 4px
+  -moz-border-radius: 4px
+  border-radius: 4px
+  cursor: pointer
+  height: 30px
+
+@mixin bootstrap-btn
+  display: inline-block
+  padding: 4px 12px
+  margin-bottom: 0
+  font-size: 14px
+  line-height: 20px
+  color: #333
+  text-align: center
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75)
+  vertical-align: middle
+  cursor: pointer
+  background-color: whiteSmoke
+  background-image: -moz-linear-gradient(top, white, #E6E6E6)
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#E6E6E6))
+  background-image: -webkit-linear-gradient(top, white, #E6E6E6)
+  background-image: -o-linear-gradient(top, white, #E6E6E6)
+  background-image: linear-gradient(to bottom, white, #E6E6E6)
+  background-repeat: repeat-x
+  border: 1px solid #BBB
+  border-color: #E6E6E6 #E6E6E6 #BFBFBF
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25)
+  border-bottom-color: #A2A2A2
+  -webkit-border-radius: 4px
+  -moz-border-radius: 4px
+  border-radius: 4px
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0)
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false)
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05)
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05)
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05)
+
+@mixin bootstrap-btn-hover
+  color: #333
+  text-decoration: none
+  background-position: 0 -15px
+  -webkit-transition: background-position 0.1s linear
+  -moz-transition: background-position 0.1s linear
+  -o-transition: background-position 0.1s linear
+  transition: background-position 0.1s linear
+  color: #333
+  background-color: #E6E6E6
+
+.resource-list
+  border-collapse: collapse
+  border-spacing: 0
+  th, td
+    border: 1px solid #DDD
+    padding: 5px
+
+.actions
+  margin: 20px 0
+  input
+    @include bootstrap-btn
+    width: 100px
+    &:hover
+      @include bootstrap-btn-hover
+
+.field
+  margin: 10px 0
+  label
+    display: block
+  textarea
+    width: 300px
+    height: 100px
+  input, textarea
+    border: 1px solid #D0D0D0
+    border-radius: 4px
+    padding: 5px
+  select
+    @include bootstrap-select
+
+#information-list
+  .new-link
+    margin: 10px 0

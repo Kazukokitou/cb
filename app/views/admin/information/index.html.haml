@@ -1,22 +1,20 @@
-%h1 Listing information
+#information-list
+  %h1 Listing information
 
-%table
-  %tr
-    %th Title
-    %th Body
-    %th Expires on
-    %th
-    %th
-    %th
+  %p.new-link= link_to 'New Information', new_admin_information_path
 
-  - @information.each do |information|
+  %table.resource-list
     %tr
-      %td= information.title
-      %td= information.body
-      %td= information.expires_on
-      %td= link_to 'Edit', edit_admin_information_path(information)
-      %td= link_to 'Destroy', admin_information_path(information), method: :delete, data: { confirm: 'Are you sure?' }
+      %th Title
+      %th Body
+      %th Expires on
+      %th
+      %th
 
-%br
-
-= link_to 'New Information', new_admin_information_path
+    - @information.each do |information|
+      %tr
+        %td= information.title
+        %td= information.body
+        %td= information.expires_on
+        %td= link_to 'Edit', edit_admin_information_path(information)
+        %td= link_to 'Destroy', admin_information_path(information), method: :delete, data: { confirm: 'Are you sure?' }

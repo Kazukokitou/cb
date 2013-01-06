@@ -2,7 +2,7 @@ class Admin::InformationController < Admin::ApplicationController
   # GET /information
   # GET /information.json
   def index
-    @information = Information.all
+    @information = Information.order('expires_on desc, id desc')
 
     respond_to do |format|
       format.html # index.html.erb
