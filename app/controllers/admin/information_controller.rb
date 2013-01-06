@@ -1,4 +1,4 @@
-class InformationController < ApplicationController
+class Admin::InformationController < ApplicationController
   # GET /information
   # GET /information.json
   def index
@@ -6,17 +6,6 @@ class InformationController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @information }
-    end
-  end
-
-  # GET /information/1
-  # GET /information/1.json
-  def show
-    @information = Information.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
       format.json { render json: @information }
     end
   end
@@ -44,7 +33,7 @@ class InformationController < ApplicationController
 
     respond_to do |format|
       if @information.save
-        format.html { redirect_to @information, notice: 'Information was successfully created.' }
+        format.html { redirect_to admin_information_index_path, notice: 'Information was successfully created.' }
         format.json { render json: @information, status: :created, location: @information }
       else
         format.html { render action: "new" }
@@ -60,7 +49,7 @@ class InformationController < ApplicationController
 
     respond_to do |format|
       if @information.update_attributes(params[:information])
-        format.html { redirect_to @information, notice: 'Information was successfully updated.' }
+        format.html { redirect_to admin_information_index_path, notice: 'Information was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -76,7 +65,7 @@ class InformationController < ApplicationController
     @information.destroy
 
     respond_to do |format|
-      format.html { redirect_to information_index_url }
+      format.html { redirect_to admin_information_index_path }
       format.json { head :no_content }
     end
   end

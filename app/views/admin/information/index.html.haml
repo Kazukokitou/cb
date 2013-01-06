@@ -14,10 +14,9 @@
       %td= information.title
       %td= information.body
       %td= information.expires_on
-      %td= link_to 'Show', information
-      %td= link_to 'Edit', edit_information_path(information)
-      %td= link_to 'Destroy', information, method: :delete, data: { confirm: 'Are you sure?' }
+      %td= link_to 'Edit', edit_admin_information_path(information)
+      %td= link_to 'Destroy', admin_information_path(information), method: :delete, data: { confirm: 'Are you sure?' }
 
 %br
 
-= link_to 'New Information', new_information_path
+= link_to 'New Information', new_admin_information_path

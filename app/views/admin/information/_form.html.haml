@@ -1,4 +1,4 @@
-= form_for @information do |f|
+= form_for @information, information_form_options(@information) do |f|
   - if @information.errors.any?
     #error_explanation
       %h2= "#{pluralize(@information.errors.count, "error")} prohibited this information from being saved:"
