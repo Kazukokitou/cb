@@ -7,7 +7,7 @@
         %dt 最新ブログ
         %dd= link_to "#{blog_info.title} (#{l blog_info.published_at})", blog_info.url
 
-      - @informations.each do |info|
+      - @information.each do |info|
         %dt= info.title
         %dd= simple_format info.body
 
