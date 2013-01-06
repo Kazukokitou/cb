@@ -1,4 +1,4 @@
-class Admin::InformationController < ApplicationController
+class Admin::InformationController < Admin::ApplicationController
   # GET /information
   # GET /information.json
   def index
