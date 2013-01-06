@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @information.title
+%p
+  %b Body:
+  = @information.body
+%p
+  %b Expires on:
+  = @information.expires_on
+
+= link_to 'Edit', edit_information_path(@information)
+\|
+= link_to 'Back', information_index_path

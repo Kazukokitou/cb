@@ -1,4 +1,6 @@
 Cb::Application.routes.draw do
+  resources :information
+
   root to: "informations#show"
   resource :concept, only: :show
   resource :menu, only: :show
