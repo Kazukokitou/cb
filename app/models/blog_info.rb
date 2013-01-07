@@ -1,6 +1,8 @@
 class BlogInfo < ActiveRecord::Base
   RSS_URL = "http://rss.exblog.jp/rss/exblog/lapin418/atom.xml" 
 
+  validates :title, :published_at, :url, presence: true
+
   def self.update_info
     logger.info "####### Start update_info"
 
