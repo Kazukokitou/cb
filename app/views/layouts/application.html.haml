@@ -19,7 +19,7 @@
   %body
     %header
       #header-sub
-        #shop-copy 小さな手作りパン工房
+        #shop-copy= link_to '小さな手作りパン工房', root_path
         %nav
           %ul
             %li= link_to 'Concept', concept_path
@@ -31,7 +31,7 @@
       #header-main
         #logo
           %h1= link_to image_tag('cb_logo.png', alt: 'Coupé Baguette'), root_path
-          #ruby -クープ バゲット-
+          #ruby= link_to '-クープ バゲット-', root_path
     #content
       = content_for?(:content) ? yield(:content) : yield
     %footer
