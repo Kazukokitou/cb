@@ -10,12 +10,13 @@
   border-radius: $radius
 
 @mixin bg-rgba($rate: 0.5)
-  // background: rgb(255, 255, 255) /* for IE6-8 */
-  background: rgba(255, 255, 255, $rate)
-  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=1,StartColorStr=#99ffffff,EndColorStr=#99ffffff)
-  -ms-filter: "progid:DXImageTransform.Microsoft.Gradient(GradientType=1,StartColorStr=#99ffffff,EndColorStr=#99ffffff)"
+  $rgba: rgba(255, 255, 255, $rate)
+  $ie-hex-str: ie-hex-str($rgba)
+  background: $rgba
+  // For IE6-8
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str},endColorstr=#{$ie-hex-str})
 
-@mixin bg-rgba-clear
+@mixin filter-clear-for-IE9
   filter: progid:DXImageTransform.Microsoft.gradient(enabled='false')
 
 @mixin cb-box-shadow($rate: .25)
@@ -223,7 +224,7 @@ li
     right: 0
     @include bg-rgba(0.6)
     &:not([dummy])
-      @include bg-rgba-clear
+      @include filter-clear-for-IE9
 
 #shop-info
   .primary-content
@@ -232,7 +233,7 @@ li
     left: 0
     @include bg-rgba(0.8)
     &:not([dummy])
-      @include bg-rgba-clear
+      @include filter-clear-for-IE9
   dl.business-hours
     dt
       color: $font-color-header
@@ -246,7 +247,7 @@ li
     left: 0
     @include bg-rgba(0.6)
     &:not([dummy])
-      @include bg-rgba-clear
+      @include filter-clear-for-IE9
   .on-complete
     height: 380px
     overflow: scroll
