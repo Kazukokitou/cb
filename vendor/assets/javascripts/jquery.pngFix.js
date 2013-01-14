@@ -83,7 +83,6 @@ jQuery.fn.pngFix = function(settings) {
 			}
 
 			jQuery(this).hide();
-      alert(strNewHTML);
 			jQuery(this).after(strNewHTML);
 
 		});
