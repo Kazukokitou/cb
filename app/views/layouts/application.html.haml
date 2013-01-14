@@ -32,7 +32,7 @@
         #logo
           %h1
             = link_to root_path do
-              = image_tag('cb_logo.png', alt: 'Coupé Baguette')
+              = image_tag('cb_logo.png', alt: 'Coupé Baguette', id: 'logo-img')
               #ruby -クープ バゲット-
     #content
       = content_for?(:content) ? yield(:content) : yield
@@ -46,3 +46,10 @@
     = javascript_include_tag "application"
     :javascript
       #{content_for?(:inner_javascript) ? yield(:inner_javascript) : ""}
+
+    /[if lte IE 6]
+      = javascript_include_tag "jquery.pngFix"
+      :javascript
+        $(document).ready(function(){
+            $(document).pngFix();
+        });
