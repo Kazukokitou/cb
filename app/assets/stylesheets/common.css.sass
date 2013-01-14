@@ -1,29 +1,11 @@
 @import compass/utilities
 @import compass/css3
+@import compass/css3/pie
 @import zurui-sass
 
-@mixin border-radius($radius: 4px)
-  -webkit-border-radius: $radius
-  -moz-border-radius: $radius
-  -ms-border-radius: $radius
-  -o-border-radius: $radius
-  border-radius: $radius
-  // For IE6-8
-  behavior: url(/assets/PIE.htc)
-
-@mixin bg-rgba($rate: 0.5)
-  $rgba: rgba(255, 255, 255, $rate)
-  $ie-hex-str: ie-hex-str($rgba)
-  background: $rgba
-  // For IE6-8
-  -pie-background: $rgba
-  behavior: url(/assets/PIE.htc)
-
-@mixin cb-box-shadow($rate: .25)
-  @include box-shadow(rgba(0, 0, 0, $rate) 0 0 5px)
-  // For IE6-8
-  -pie-box-shadow: 0 0 0 rgba(0,0,0,0)
-  behavior: url(/assets/PIE.htc)
+$default-border-radius: 4px
+$pie-behavior: url(/assets/PIE.htc)
+$pie-default-approach: none
 
 $logo-color: #6B492D
 $font-color: #333
@@ -39,6 +21,25 @@ $font-size-ll: $font-size + 7px
 $font-size-h1: $font-size + 13px
 $font-size-h2: $font-size + 5px
 $font-size-h3: $font-size + 3px
+
+@mixin cb-border-radius
+  @include border-radius
+  // For IE6-8
+  @include pie
+
+@mixin bg-rgba($alpha: 0.5)
+  $rgba: rgba(255, 255, 255, $alpha)
+  @include background($rgba)
+  // For IE6-8
+  -pie-background: $rgba
+  @include pie
+
+@mixin cb-box-shadow($alpha: .25)
+  @include box-shadow(rgba(0, 0, 0, $alpha) 0 0 5px)
+  // For IE6-8
+  border: 1px solid #DDD \9 // For IE6-8
+  -pie-box-shadow: 0 0 0 rgba(0, 0, 0, 0)
+  @include pie
 
 *
   margin: 0
@@ -146,7 +147,7 @@ li
     position: absolute
     padding: 20px
     margin: 15px
-    @include border-radius(4px)
+    @include cb-border-radius
     @include cb-box-shadow(.35)
     dt
       font-weight: bold
@@ -159,7 +160,7 @@ li
   img
     width: 880px
     height: 550px
-    @include border-radius(4px)
+    @include cb-border-radius
     @include cb-box-shadow
 
 #concept
@@ -173,7 +174,7 @@ li
     img
       width: 420px
       height: 264px
-      @include border-radius(4px)
+      @include cb-border-radius
       @include cb-box-shadow
     h3
       color: $font-color-header
@@ -211,8 +212,9 @@ li
           width: 280px
           height: 175px
           vertical-align: bottom
-          @include border-radius(4px)
+          @include cb-border-radius
           @include cb-box-shadow
+          _width: 276px // For IE6
         figcaption
           font-size: $font-size-l
           margin-top: 3px
@@ -258,7 +260,7 @@ li
     border: 1px solid #AAA
     color: #666666
     padding: 4px 2px
-    @include border-radius(4px)
+    @include cb-border-radius
   dl
     input
       width: 220px
