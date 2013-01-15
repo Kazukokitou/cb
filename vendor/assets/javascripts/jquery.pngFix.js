@@ -67,8 +67,10 @@ jQuery.fn.pngFix = function(settings) {
 				prevStyle += 'padding:'+this.style.padding+';';
 				this.style.padding = '';
 			}
-			if (this.style.margin) {
-				prevStyle += 'margin:'+this.style.margin+';';
+			// if (this.style.margin) {
+			// 	prevStyle += 'margin:'+this.style.margin+';';
+			if (true) {
+				prevStyle += 'margin:0 5px -8px 0;';
 				this.style.margin = '';
 			}
 			var imgStyle = (this.style.cssText);
