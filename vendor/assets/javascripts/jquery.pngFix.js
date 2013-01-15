@@ -70,7 +70,7 @@ jQuery.fn.pngFix = function(settings) {
 			// if (this.style.margin) {
 			// 	prevStyle += 'margin:'+this.style.margin+';';
 			if (true) {
-				prevStyle += 'margin:0 5px -8px 0;';
+				prevStyle += 'margin:0 3px -8px 0;';
 				this.style.margin = '';
 			}
 			var imgStyle = (this.style.cssText);
